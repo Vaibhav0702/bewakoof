@@ -162,7 +162,7 @@ hr{
 }
 .hrbelow{
 display: grid;
-grid-template-columns: repeat(3,1fr);
+grid-template-columns: repeat(4,1fr);
 width: 85%;
 margin: auto;
 justify-content: space-evenly;

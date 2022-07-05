@@ -274,7 +274,11 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="rightText">
+          <div className="rightText"  style={{color:"cyan"}} >
+
+             <h3>FANBOOK</h3>
+             <h3>OFFERS</h3>
+              <h3>SITEMAP</h3>
 
           </div>
         </div>
