@@ -6,8 +6,6 @@ const router = express.Router();
 
 router.post("", async (req, res) => {
 
-  req.body.userId = req.user._id;
-
   try {
     const products = await Products.create(req.body);
 
@@ -20,7 +18,7 @@ router.post("", async (req, res) => {
 router.patch(
   "/:id",
   async (req, res) => {
-    req.body.userId = req.user._id;
+  
     try {
       const products = await Products.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
@@ -36,7 +34,7 @@ router.patch(
 router.delete(
   "/:id",
   async (req, res) => {
-    req.body.userId = req.user._id;
+   
     try {
       const products = await Products.findByIdAndDelete(req.params.id);
 
@@ -46,6 +44,18 @@ router.delete(
     }
   }
 );
+
+router.get("/:id", async (req, res) => {
+
+    try {
+      const products = await Products.findById(req.params.id);
+  
+      return res.status(201).send({ products : products });
+    } catch (err) {
+      return res.status(500).send({ message: err.message });
+    }
+  });
+  
 
 router.get("", async (req, res) => {
   try {

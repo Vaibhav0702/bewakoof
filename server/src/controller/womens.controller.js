@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("", async (req, res) => {
 
-  req.body.userId = req.user._id;
+
 
   try {
     const women = await Women.create(req.body);
@@ -20,7 +20,7 @@ router.post("", async (req, res) => {
 router.patch(
   "/:id",
   async (req, res) => {
-    req.body.userId = req.user._id;
+    
     try {
       const women = await Women.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
@@ -36,7 +36,7 @@ router.patch(
 router.delete(
   "/:id",
   async (req, res) => {
-    req.body.userId = req.user._id;
+  
     try {
       const women = await Women.findByIdAndDelete(req.params.id);
 
@@ -46,6 +46,17 @@ router.delete(
     }
   }
 );
+
+router.get("/:id", async (req, res) => {
+    try {
+      const women = await Women.findById(req.params.id);
+  
+      return res.status(201).send({ women: women });
+    } catch (err) {
+      return res.status(500).send({ message: err.message });
+    }
+  });
+  
 
 router.get("", async (req, res) => {
   try {

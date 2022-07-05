@@ -50,6 +50,17 @@ router.delete(
   }
 );
 
+router.get("/:id", async (req, res) => {
+    try {
+      const mens = await Mens.findById(req.params.id);
+  
+      return res.status(201).send({ mens : mens });
+    } catch (err) {
+      return res.status(500).send({ message: err.message });
+    }
+  });
+  
+
 router.get("", async (req, res) => {
   try {
     const mens = await Mens.find().lean().exec();
