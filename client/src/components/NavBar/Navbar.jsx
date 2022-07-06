@@ -11,21 +11,6 @@ import { DropdownWomen } from "./DropdownWomen";
 
 
 
-
-import { HamburgerIcon } from '@chakra-ui/icons'
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const Navbar = () => {
 
   const [menHovering, setMenHovering] = useState(false);
