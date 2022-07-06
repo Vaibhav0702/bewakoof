@@ -132,9 +132,9 @@ export const Navbar = () => {
 
             className="NavleftM"
           >
-            <Link className="no" to="/Home/men">
+            <Link className="no" to="/men">
               {" "}
-              Men
+              MEN
             </Link>
 
             {menHovering && <DropdownMen />}
@@ -144,8 +144,8 @@ export const Navbar = () => {
             onMouseEnter={() => setWomenHovering(true)}
             onMouseLeave={() => setWomenHovering(false)}
           >
-            <Link className="no" to="/Home/women">
-              Women
+            <Link className="no" to="/women">
+              WOMEN
             </Link>
             {womenHovering && <DropdownWomen />}
           </li>
@@ -154,8 +154,8 @@ export const Navbar = () => {
             onMouseEnter={() => setMobileHovering(true)}
             onMouseLeave={() => setMobileHovering(false)}
           >
-            <Link className="no" to="/Home/mobilecovers">
-              Mobilecover
+            <Link className="no" to="/assesories">
+            ACCESSORIES
             </Link>
             {mobileHovering && <DropdownMobile />}
           </li>

@@ -145,9 +145,20 @@
 
 
 
+.loding{
+    /* border: 1px solid red; */
+     width: 10%;
+     margin: auto;
 
+}
 
-
+.loding>img{
+   /* border: 1px solid blue; */
+   border-radius: 20px;
+   width: 100%;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
 
 
 
@@ -243,6 +254,23 @@
 
 
 
+
+
+
+.loding{
+    /* border: 1px solid red; */
+     width: 10%;
+     margin: auto;
+
+}
+
+.loding>img{
+   /* border: 1px solid blue; */
+   border-radius: 20px;
+   width: 100%;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
 
 
 

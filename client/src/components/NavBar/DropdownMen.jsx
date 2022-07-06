@@ -15,14 +15,14 @@ export const DropdownMen = () => {
           <div className="first-column">
             <div className="div">Topwear</div>
             <ul className="Mobile-submenu">
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li onClick={() => setDropdown(false)}>Printed T-Shirts</li>
               </Link>
 
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Oversized T-Shirts</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Plain T-Shirts</li>
               </Link>
             </ul>
@@ -30,13 +30,13 @@ export const DropdownMen = () => {
           <div className="second-column">
             <div className="div">Bottomwear</div>
             <ul>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Joggers</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Pajamas</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Shorts</li>
               </Link>
             </ul>
@@ -44,13 +44,13 @@ export const DropdownMen = () => {
           <div className="Third-column">
             <div className="div">Sports & Activewear</div>
             <ul>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Active T-Shirts</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Sports Shorts</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Sports Joggers</li>
               </Link>
             </ul>
@@ -61,15 +61,15 @@ export const DropdownMen = () => {
           <div className="first-column">
             <div className="div">Plus Size</div>
             <ul>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>T-shirts</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Joggers</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Kurtas</li>
               </Link>
@@ -78,15 +78,15 @@ export const DropdownMen = () => {
           <div className="second-column">
             <div className="div">Winterwear</div>
             <ul>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Sweatshirt & Hoodie</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Jackets</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Sweaters</li>
               </Link>
@@ -95,15 +95,15 @@ export const DropdownMen = () => {
           <div className="Third-column">
             <div className="div">Loungewear</div>
             <ul>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Vests</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Pajamas</li>
               </Link>
-              <Link to="/Home/men" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Boxers</li>
               </Link>

@@ -15,14 +15,14 @@ export const DropdownMobile = () => {
           <div className="first-column">
             <div className="div" >Xiomi</div>
             <ul className="Mobile-submenu">
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li onClick={() => setDropdown(false)}>Redmi 9 power</li>
               </Link>
 
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Xiomi Mi 10i</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>Xiomi Mi 10i 5G</li>
               </Link>
             </ul>
@@ -30,13 +30,13 @@ export const DropdownMobile = () => {
           <div className="second-column">
             <div className="div">OnePlus</div>
             <ul>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>OnePlus 9R</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>OnePlus 9</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>OnePlus 8 Pro</li>
               </Link>
             </ul>
@@ -44,13 +44,13 @@ export const DropdownMobile = () => {
           <div className="Third-column">
             <div className="div">Apple</div>
             <ul>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>iPhone 13 Pro Max</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>iPhone 13 Pro</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 <li>iPhone 13</li>
               </Link>
             </ul>
@@ -61,15 +61,15 @@ export const DropdownMobile = () => {
           <div className="first-column">
             <div className="div">Samsung</div>
             <ul>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Samsung Galaxy Note 10 lite</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Samsung Galaxy F62</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Samsung Galaxy F41</li>
               </Link>
@@ -78,15 +78,15 @@ export const DropdownMobile = () => {
           <div className="second-column">
             <div className="div">Realme</div>
             <ul>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Realme 5 Pro</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Realme 5</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Realme 7</li>
               </Link>
@@ -95,15 +95,15 @@ export const DropdownMobile = () => {
           <div className="Third-column">
             <div className="div">Vivo</div>
             <ul>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Vivo S1</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Vivo Y73</li>
               </Link>
-              <Link to="/Home/mobilecovers" className="submenu-item">
+              <Link to="/" className="submenu-item">
                 {" "}
                 <li>Vivo V11 Pro</li>
               </Link>

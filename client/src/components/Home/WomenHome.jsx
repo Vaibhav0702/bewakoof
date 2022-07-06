@@ -1,7 +1,7 @@
 
 
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./MenHome.css"
 
 
@@ -41,6 +41,23 @@ function WomenHome() {
 
 
 
+    const [loding , setLoding] = useState(true);
+
+    
+    useEffect(()=>{
+           setTimeout(()=>{
+              
+                loding1();
+                  
+           },1500)
+    },[])
+
+  const loding1 = ()=>{
+
+         setLoding(false);
+
+  }
+
 
 
 
@@ -56,6 +73,8 @@ function WomenHome() {
 
     return (
         <>
+            
+          { loding ? <div className='loding'><img src="https://images.bewakoof.com/web/bwkf-loading-anim-common.gif" alt="" /></div> :
 
             <div className='pageContainer'>
 
@@ -371,7 +390,7 @@ function WomenHome() {
 
 
 
-            </div>
+            </div>}
 
 
 
