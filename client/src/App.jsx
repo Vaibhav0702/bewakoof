@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import { Navbar } from './components/Home/Navbar';
+import { Navbar } from './components/NavBar/Navbar';
 import { Routes, Route } from "react-router-dom"
 import { Home } from './components/Home/Home';
 import { Men } from './components/Home/Men'
@@ -21,7 +21,7 @@ import Thanks from './components/Cart/thanks';
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/> */}
+      <Navbar/>
       <Routes>
        
         {/* <Route path='/' element={<Home />}></Route> */}
@@ -49,7 +49,7 @@ function App() {
         <Route path='/Home/footer' element={<Footer />}></Route> */}
 
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

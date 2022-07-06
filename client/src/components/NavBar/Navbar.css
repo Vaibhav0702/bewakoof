@@ -1,0 +1,209 @@
+.Nav{
+    width: 100%;
+
+    display: flex;
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   padding: 0 0px 0 10px;
+    /* border: 1px solid blue; */
+  margin-top: -100px;
+   
+}
+
+.Navleft {
+    width: 50%;
+  
+   display: flex;
+   align-self: center;
+   justify-content: space-between;
+   margin-right: 250px;
+
+   /* border: 1px solid yellow; */
+
+}
+
+.Navleft li{
+ 
+  text-decoration: none;
+  color: black;
+
+  list-style: none;
+ 
+
+};
+
+
+
+.Navleft li link{
+  text-decoration: none;
+}
+
+.no{
+    text-decoration: none;
+  align-self: center;
+    color: black;
+  font-size: 20px;
+  width: fit-content;
+  margin: 10px;
+
+  /* border: 1px solid blue; */
+  
+}
+
+.no:hover{
+  border-bottom: 4px solid yellow;
+}
+
+.Navright {
+    width: 55%;
+    /* height: 60px; */
+   display: flex;
+   align-self: center;
+   justify-content: space-around;
+   align-content: flex-end;
+   font-size: 20px;
+   /* border: 1px solid orangered; */
+
+}
+
+.alignself{
+    align-self: center;
+}
+
+.alignself span{
+ 
+  position: absolute;
+
+}
+.icon {
+ 
+ 
+  min-width: 40px;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.searchbox{
+ 
+  width: 300px;
+
+  padding: 10px;
+  padding-left: 10px;
+
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  opacity: 80%;
+  background-color: rgb(245, 243, 243);
+ 
+}
+
+.icon-navbar{
+  color: #0ba0a0;
+}
+
+
+.mbRight{
+   /* border: 1px solid red; */
+  
+   display: flex;
+   gap: 20px;
+}
+
+.mbRight>div{
+  /* border: 1px solid blue; */
+  padding: 10px;
+}
+
+
+.Mobilelogo{
+  visibility: hidden;
+  display: none;
+}
+
+
+.Nav1{
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px){
+
+  .Nav{
+    width: 100%;
+
+    display: flex;
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   padding: 0 0px 0 10px;
+    /* border: 1px solid blue; */
+  margin-top: -65px;
+
+  display: none;
+   
+}
+
+
+.Nav1{
+  /* border: 1px solid green; */
+  width: 100%;
+
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  background-color: white;
+
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ padding: 0 0px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  visibility: visible;
+}
+
+
+
+.NavleftM{
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+
+.mbRightM{
+   /* border: 1px solid red; */
+  
+   display: flex;
+   gap: 20px;
+}
+
+.mbRightM>div{
+  /* border: 1px solid blue; */
+  padding: 10px;
+}
+
+
+
+
+
+
+}

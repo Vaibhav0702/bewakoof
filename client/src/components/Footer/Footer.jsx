@@ -278,7 +278,7 @@ export const Footer = () => {
 
              <h3>FANBOOK</h3>
              <h3>OFFERS</h3>
-              <h3>SITEMAP</h3>
+             <h3>SITEMAP</h3>
 
           </div>
         </div>
