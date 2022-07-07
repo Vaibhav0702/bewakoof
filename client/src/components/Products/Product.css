@@ -1,0 +1,45 @@
+
+
+.ProductContainer{
+    /* border: 1px solid red; */
+   
+    padding: 2%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.productBox{
+    /* border: 1px solid blue; */
+
+    display: flex;
+}
+
+
+.filterBox{
+    flex: 3;
+    /* border: 1px solid blue; */
+}
+
+.mapBox{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+    flex: 8;
+    gap: 10px;
+
+    height: 800px;
+
+    overflow: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+

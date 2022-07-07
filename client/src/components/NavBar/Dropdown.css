@@ -16,9 +16,6 @@
     display: block;
 }
 
-
-
-
 .navcontainer.clicked{
     display: none;
     z-index: 3;

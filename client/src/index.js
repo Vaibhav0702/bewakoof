@@ -5,16 +5,34 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 
+
+import axios from "axios";
+import { Provider } from "react-redux";
+import { store } from './Redux/store';
+
+
+
+// axios.defaults.baseURL = "https://dataserverbank.herokuapp.com";
+
+axios.defaults.baseURL = "http://localhost:5000";
+
+axios.defaults.headers.post["Content-Type"] = "application/json";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <BrowserRouter>
    
-    <App />
+ 
+      <Provider store={store}>
+        <App />
+      </Provider>
+  
 
     </BrowserRouter>
     
-  </React.StrictMode>
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function

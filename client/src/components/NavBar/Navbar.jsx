@@ -19,6 +19,9 @@ export const Navbar = () => {
 
   const [womenHovering, setWomenHovering] = useState(false);
 
+
+
+  
   return (
     <>
 
@@ -28,21 +31,21 @@ export const Navbar = () => {
 
 
       <div className="Nav1">
-             
 
-          <div className="NavleftM">
-     
-              <div >
-                <Link to="/">
-                  <img
-                    src="https://images.bewakoof.com/web/ic-web-head-bwk-primary-logo-eyes.svg"
-                    alt="bewakoof-logo" style={{ width: "50px" }}
-                  />
-                </Link>
-              </div>
-      
 
+        <div className="NavleftM">
+
+          <div >
+            <Link to="/">
+              <img
+                src="https://images.bewakoof.com/web/ic-web-head-bwk-primary-logo-eyes.svg"
+                alt="bewakoof-logo" style={{ width: "50px" }}
+              />
+            </Link>
           </div>
+
+
+        </div>
 
         <div className="NavrightM">
           <div className="mbRightM">
@@ -155,7 +158,7 @@ export const Navbar = () => {
             onMouseLeave={() => setMobileHovering(false)}
           >
             <Link className="no" to="/assesories">
-            ACCESSORIES
+              ACCESSORIES
             </Link>
             {mobileHovering && <DropdownMobile />}
           </li>

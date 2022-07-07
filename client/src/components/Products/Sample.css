@@ -1,0 +1,120 @@
+.cancelprice {
+  text-decoration: line-through;
+  font-family: "montserrat", sans-serif;
+  color: #555555;
+  opacity: 70%;
+
+}
+.pricetribe {
+  
+    /* border: 1px solid orangered; */
+    text-align: left;
+    padding: 2%;
+    width: fit-content;
+    background-color: #e0dbdb;
+    border-radius: 10%;
+   font-size: 80%;
+
+}
+
+.ProductMain {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  /* border: 2px solid red; */
+
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "montserrat", sans-serif;
+}
+
+.ProducImage img {
+  
+  border-radius: 10px;
+
+    
+
+
+}
+
+.ProducImage>img{
+    width: 100%;
+}
+
+
+.ProductDescription {
+
+  font-family: "montserrat", sans-serif;
+  padding: 5%;
+  /* border: 1px solid green; */
+}
+
+
+
+
+
+
+.ProducImage {
+  position: relative;
+  width: 100%;
+}
+
+
+.CartButton button  {
+  border: none;
+  background-color: #75e0e0;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-left: 14px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.CartButton button:hover {
+  padding: 4px;
+}
+.Producttitle {
+  font-size: 12px;
+  color: gray;
+  opacity: 90%;
+  line-height: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.ProductPrice {
+  color: #2d2d2d;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.ProductPrice{
+
+   display: flex;
+
+  gap:10%
+  
+
+}
+
+
+.Cartdiv{
+     
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+
+    padding: 3%;
+}
+
+.productwishicon{
+
+    width: 25px;
+    padding: 5px;
+}
