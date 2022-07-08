@@ -1,6 +1,7 @@
 
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
@@ -14,10 +15,10 @@ import SampleProduct from './SampleProduct';
 const Product = () => {
 
 
+    const products = useSelector((store) => store.ecommerceData.products)
 
+    const [searchparams, setSearchParams] = useSearchParams();
 
-
-    const products = useSelector((store) => store.ecommerceData.products.products)
 
 
     const dispatch = useDispatch();
@@ -26,15 +27,44 @@ const Product = () => {
     console.log("Products ", products)
 
 
+
+
+
+
     useEffect(() => {
 
-        dispatch(getProductsData());
+     
+
+        if (products?.length === 0) {
+
+            let params = {
+                category: searchparams.getAll("category"),
+                _sort: "payment",
+                _order: searchparams.get("Sort"),
+
+
+            };
+
+          
+                dispatch(getProductsData(params))
+        
+
+           
+        }
+
+
+      
+
+
+    }, [dispatch, products?.length, searchparams, setSearchParams])
 
 
 
 
 
-    }, [dispatch])
+
+
+
 
 
 
@@ -51,58 +81,55 @@ const Product = () => {
 
 
         <>
+          
 
+                <div className="ProductContainer">
 
-            <div className="ProductContainer">
-
-                <h1 >Mens Ware</h1>
-
-
-
-                <div className="productBox">
-
-
-                    <div className="filterBox">
-
-                        <Filterbox />
-
-
-                    </div>
-
-                    <div className='mapBox'>
-                        {
-
-                            products && products?.map((e) => {
-
-
-                                return <div className="MensDiv" key={e.dataid} >
-                                    <SampleProduct
-                                        product_id={e.id}
-                                        productimage_url={e.image}
-                                        productname={e.name}
-                                        productprice={e.price}
-                                        productcancelprice={e.canceledprice}
-                                        producttribe={e.tribe}
-
-                                    />
-
-                                </div>
+                    <h1 >Mens Ware</h1>
 
 
 
+                    <div className="productBox">
 
 
+                        <div className="filterBox">
+
+                            <Filterbox />
 
 
-                            })
+                        </div>
+
+                        <div className='mapBox'>
+                            {
+
+                                products && products?.map((e) => {
 
 
+                                    return <div className="MensDiv" key={e.dataid} >
+                                        <SampleProduct
+                                            product_id={e.id}
+                                            productimage_url={e.image}
+                                            productname={e.name}
+                                            productprice={e.price}
+                                            productcancelprice={e.canceledprice}
+                                            producttribe={e.tribe}
+
+                                        />
+
+                                    </div>
+
+                                })
+
+                            }
 
 
-                        }
+                        </div>
+
 
 
                     </div>
+
+
 
 
 
@@ -112,15 +139,8 @@ const Product = () => {
 
 
 
-            </div>
 
-
-
-
-
-
-
-
+      
         </>
     )
 }

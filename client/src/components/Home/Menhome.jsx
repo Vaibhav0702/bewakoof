@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Link } from 'react-router-dom';
 
 
 import "./MenHome.css"
@@ -36,22 +37,22 @@ const Menhome = () => {
 
 
 
-    const [loding , setLoding] = useState(true);
+    const [loding, setLoding] = useState(true);
 
-    
-    useEffect(()=>{
-           setTimeout(()=>{
-              
-                loding1();
-                  
-           },1500)
-    },[])
 
-  const loding1 = ()=>{
+    useEffect(() => {
+        setTimeout(() => {
 
-         setLoding(false);
+            loding1();
 
-  }
+        }, 1500)
+    }, [])
+
+    const loding1 = () => {
+
+        setLoding(false);
+
+    }
 
 
 
@@ -125,14 +126,22 @@ const Menhome = () => {
                     <div className="catagories">
 
 
-                        <div>
-
-                            <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-best-seller-1637307127.jpg" alt="" />
+                      
 
 
-                            <p>Best Seller</p>
 
-                        </div>
+                            <div>
+
+                                <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-best-seller-1637307127.jpg" alt="" />
+
+
+                                <Link to={"/product"} > <p>Best Seller</p>   </Link>
+
+                            </div>
+
+
+                     
+
 
 
 
