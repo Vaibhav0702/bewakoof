@@ -4,6 +4,15 @@ import {
   ADD_PRODUCT_CART_FAILURE,
   ADD_PRODUCT_CART_REQUEST,
   ADD_PRODUCT_CART_SUCCESS,
+  ADD_PRODUCT_WISH_FAILURE,
+  ADD_PRODUCT_WISH_REQUEST,
+  ADD_PRODUCT_WISH_SUCCESS,
+  FETCH_CART_FAILURE,
+  FETCH_CART_REQUEST,
+  FETCH_CART_SUCCESS,
+  FETCH_WISH_FAILURE,
+  FETCH_WISH_REQUEST,
+  FETCH_WISH_SUCCESS,
   GET_PRODUCTS_DATA_FAILURE,
   GET_PRODUCTS_DATA_REQUEST,
   GET_PRODUCTS_DATA_SUCCESS,
@@ -35,7 +44,6 @@ const getProductsDataFailure = (payload) => {
   };
 };
 
-
 const getProductsData = (payload) => {
   return (dispatch) => {
     dispatch(getProductsDataRequest());
@@ -43,7 +51,7 @@ const getProductsData = (payload) => {
     axios
       .get("/products", {
         params: {
-          ...payload, 
+          ...payload,
         },
       })
       .then((res) => {
@@ -53,8 +61,6 @@ const getProductsData = (payload) => {
       .catch((err) => dispatch(getProductsDataFailure(err.data)));
   };
 };
-
-
 
 // ----------------------get single product details
 
@@ -79,8 +85,7 @@ const getSingleProductFailure = (payload) => {
   };
 };
 
-const getSingleProduct = (id , navigate) => (dispatch) => {
-  
+const getSingleProduct = (id, navigate) => (dispatch) => {
   dispatch(getSingleProductRequest());
 
   axios
@@ -88,16 +93,11 @@ const getSingleProduct = (id , navigate) => (dispatch) => {
     .then((res) => dispatch(getSingleProductSuccess(res.data)))
     .catch((err) => {
       dispatch(getSingleProductFailure(err.data));
-      if(err.message === "Request failed with status code 404")
-      {
-          
-               navigate("/error")
-          
+      if (err.message === "Request failed with status code 404") {
+        navigate("/error");
       }
     });
 };
-
-
 
 // ----------------Add to cart
 
@@ -127,8 +127,106 @@ const addProductCart = (product) => (dispatch) => {
 
   axios
     .post("/cart", product)
-    .then((res) => dispatch(addProductCartSuccess(res.data)))
-    .catch((err) => dispatch(addProductCartFailure(err.data)));
+    .then((res) => {
+
+      dispatch(addProductCartSuccess(res.data))
+       
+      alert("Product is Successfully Added to cart 😃");
+    
+    })
+    .catch((err) =>{
+
+     dispatch(addProductCartFailure(err.data))
+     alert("Added to cart UnSuccessful 😩");
+     
+    });
+};
+
+
+
+
+
+
+// ----------------Add to Wishlist
+
+const addProductWishRequest = (payload) => {
+  return {
+    type: ADD_PRODUCT_WISH_REQUEST,
+    payload,
+  };
+};
+
+const addProductWishSuccess = (payload) => {
+  return {
+    type: ADD_PRODUCT_WISH_SUCCESS,
+    payload,
+  };
+};
+
+const addProductWishFailure = (payload) => {
+  return {
+    type: ADD_PRODUCT_WISH_FAILURE,
+    payload,
+  };
+};
+
+const addProductWish = (product) => (dispatch) => {
+
+  dispatch(addProductWishRequest());
+
+  axios
+    .post("/wishlist", product)
+    .then((res) => {
+
+      dispatch(addProductWishSuccess(res.data))
+       
+      alert("Product is Successfully Added to Wishlist 😃");
+    
+    })
+    .catch((err) =>{
+
+     dispatch(addProductWishFailure(err.data))
+     alert("Added to Wishlist UnSuccessful 😩");
+     
+    });
+};
+
+
+
+
+
+
+// ------------------------get Cart data --------------------
+
+
+const fetchCartRequest = (payload) => {
+  return {
+    type: FETCH_CART_REQUEST,
+    payload,
+  };
+};
+
+const fetchCartSuccess = (payload) => {
+  return {
+    type: FETCH_CART_SUCCESS,
+    payload,
+  };
+};
+
+const fetchCartFailure = (payload) => {
+  return {
+    type: FETCH_CART_FAILURE,
+    payload,
+  };
+};
+
+const fetchCart = (payload) => (dispatch) => {
+  dispatch(fetchCartRequest());
+
+  axios
+    .get("/cart")
+    .then((res) => dispatch(fetchCartSuccess(res.data)))
+    .catch((err) => dispatch(fetchCartFailure(err.data)));
 };
 
 
@@ -138,4 +236,51 @@ const addProductCart = (product) => (dispatch) => {
 
 
 
-export { getProductsData ,addProductCart  ,getSingleProduct   };
+// ------------------------get Wish data --------------------
+
+
+const fetchWishRequest = (payload) => {
+  return {
+    type: FETCH_WISH_REQUEST,
+    payload,
+  };
+};
+
+const fetchWishSuccess = (payload) => {
+  return {
+    type: FETCH_WISH_SUCCESS,
+    payload,
+  };
+};
+
+const fetchWishFailure = (payload) => {
+  return {
+    type: FETCH_WISH_FAILURE,
+    payload,
+  };
+};
+
+const fetchWish = (payload) => (dispatch) => {
+  dispatch(fetchWishRequest());
+
+  axios
+    .get("/wishlist")
+    .then((res) => dispatch(fetchWishSuccess(res.data)))
+    .catch((err) => dispatch(fetchWishFailure(err.data)));
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export { getProductsData, addProductCart, getSingleProduct ,addProductWish  , fetchCart ,fetchWish };

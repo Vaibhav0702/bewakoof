@@ -9,7 +9,10 @@ import WomenHome from '../components/Home/WomenHome'
 import AssesoriesHome from "../components/Home/AssesoriesHome"
 import Product from '../components/Products/Product'
 import ProductDetails from '../components/Products/ProductDetails'
-import ErrorPage from '../components/ErrorPage'
+import ErrorPage from '../pages/ErrorPage'
+import Cart from '../components/Cart/Cart'
+import WishList from '../components/Wishlist/WishList'
+import Login from '../components/Login/Login'
 
 const AllRoutes = () => {
   return (
@@ -30,7 +33,18 @@ const AllRoutes = () => {
        <Route path='/assesories' element={<AssesoriesHome/>}></Route>
 
        <Route path='/products/:product_id' element={<ProductDetails />} />
+      
+       
+       <Route path='/cart' element={<Cart/>} />
 
+
+       <Route path='/wishlist' element={<WishList/>} />
+
+
+       
+       <Route path='/login' element={<Login/>} />
+
+       
 
        <Route path='/error' element={<ErrorPage/>} />
 

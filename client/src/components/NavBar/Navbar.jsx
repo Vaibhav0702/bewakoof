@@ -51,18 +51,18 @@ export const Navbar = () => {
           <div className="mbRightM">
             <div>
 
-              <Link className="no1" style={{ textDecoration: "none" }} to="/Home/login">
+              <Link className="no1" style={{ textDecoration: "none" }} to="/login">
                 <p style={{ margin: "3px" }} > Login</p>
               </Link>
             </div>
 
             <div>
-              <Link className="no1" to="/Home/wishlist">
+              <Link className="no1" to="/wishlist">
                 <FavoriteIcon className="icon-navbar" fontSize="large" />
               </Link>
             </div>
             <div>
-              <Link className="no1" to="./Cart/cart">
+              <Link className="no1" to="/cart">
                 <ShoppingBagIcon className="icon-navbar" fontSize="large" />
               </Link>
             </div>
@@ -173,24 +173,24 @@ export const Navbar = () => {
             <input
               className="searchbox"
               type="text"
-              placeholder="search by product, category or collection"
+              placeholder="search by product, category or collection 🧐"
             />
           </div>
           <div className="mbRight">
             <div>
 
-              <Link className="no1" style={{ textDecoration: "none" }} to="/Home/login">
+              <Link className="no1" style={{ textDecoration: "none" }} to="/login">
                 <p style={{ margin: "0px" }} > Login</p>
               </Link>
             </div>
 
             <div>
-              <Link className="no1" to="/Home/wishlist">
+              <Link className="no1" to="/wishlist">
                 <FavoriteIcon className="icon-navbar" fontSize="large" />
               </Link>
             </div>
             <div>
-              <Link className="no1" to="./Cart/cart">
+              <Link className="no1" to="/cart">
                 <ShoppingBagIcon className="icon-navbar" fontSize="large" />
               </Link>
             </div>

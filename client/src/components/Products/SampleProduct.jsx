@@ -25,7 +25,7 @@ const SampleProduct = ({
     return (
         <>
 
-            <Link to={`/products/${product_id}`} >
+            <Link style={{textDecoration:"none"}} to={`/products/${product_id}`} >
 
 
                 <div className="ProductMain ">
@@ -66,8 +66,11 @@ const SampleProduct = ({
                                 </button>
                             </div>
 
-                            <div >
-                                <AiOutlineHeart className="productwishicon" />
+                            <div  className="CartButton" >
+                                <button>
+                                     <AiOutlineHeart  />
+                                </button>
+                               
                             </div>
                         </div>
 

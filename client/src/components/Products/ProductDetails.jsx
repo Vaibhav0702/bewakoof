@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { addProductCart, getSingleProduct } from '../../Redux/Products/action';
-import SampleProduct from './SampleProduct';
+import { addProductCart, addProductWish, getSingleProduct } from '../../Redux/Products/action';
+
 
 import "./ProDetails.css"
+import { AiOutlineHeart } from 'react-icons/ai';
+import ListProduct from './ListProduct';
+
+
+
 
 const ProductDetails = () => {
-
-
 
 
     const navigate = useNavigate();
@@ -41,17 +44,27 @@ const ProductDetails = () => {
         currentProduct && dispatch(addProductCart(currentProduct));
 
 
+
     }
 
-  const Rating = Math.random().toFixed(1)*((4 - 2 + 1) + 2);
+
+    const addToWishHandler = () => {
+
+        currentProduct && dispatch(addProductWish(currentProduct));
+
+
+
+    }
+
+
+
+    const Rating = Math.random().toFixed(1) * ((4 - 2 + 1) + 2);
 
 
     return (
         <>
 
-            <div className='productDabba'   > 
-
-
+            {/* <div className='productDabba'   > 
 
                   <div className="imgDabba">
                           <img src={currentProduct.image} alt="" />
@@ -89,27 +102,51 @@ const ProductDetails = () => {
 
                         <div className="Cartdiv">
                             <div className="CartButton">
-                                <button  >
+                                <button onClick={addToCartHandler} >
                                     Add To Cart
                                 </button>
+                                <p> 🚚 2-3 business days delivery</p>
+                               
+                            </div>
+
+                            <div >
+                                <AiOutlineHeart    onClick={addToWishHandler} className="productwishicon" />
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
 
                     </div>
 
 
-            </div>
+            </div> */}
+
+
+
+
+            <ListProduct
+
+                image={currentProduct.image}
+
+                name={currentProduct.name}
+
+                price={currentProduct.price}
+
+                canceledprice={currentProduct.canceledprice}
+
+                tribe={currentProduct.tribe}
+
+                Rating={Rating}
+
+                CartHandler={addToCartHandler}
+
+                WishHandler={addToWishHandler}
+
+                wish={<button><AiOutlineHeart /></button>}
+
+                addtocart={"Add To Cart"}
+
+                line={"🚚 2-3 business days delivery"}
+
+            />
 
         </>
     )

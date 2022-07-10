@@ -1,4 +1,4 @@
-import { ADD_PRODUCT_CART_FAILURE, ADD_PRODUCT_CART_REQUEST, ADD_PRODUCT_CART_SUCCESS, GET_PRODUCTS_DATA_FAILURE, GET_PRODUCTS_DATA_REQUEST, GET_PRODUCTS_DATA_SUCCESS, GET_SINGLE_PRODUCT_FAILURE, GET_SINGLE_PRODUCT_REQUEST, GET_SINGLE_PRODUCT_SUCCESS } from "./actionTypes";
+import { ADD_PRODUCT_CART_FAILURE, ADD_PRODUCT_CART_REQUEST, ADD_PRODUCT_CART_SUCCESS, ADD_PRODUCT_WISH_FAILURE, ADD_PRODUCT_WISH_REQUEST, ADD_PRODUCT_WISH_SUCCESS, FETCH_CART_FAILURE, FETCH_CART_REQUEST, FETCH_CART_SUCCESS, FETCH_WISH_FAILURE, FETCH_WISH_REQUEST, FETCH_WISH_SUCCESS, GET_PRODUCTS_DATA_FAILURE, GET_PRODUCTS_DATA_REQUEST, GET_PRODUCTS_DATA_SUCCESS, GET_SINGLE_PRODUCT_FAILURE, GET_SINGLE_PRODUCT_REQUEST, GET_SINGLE_PRODUCT_SUCCESS } from "./actionTypes";
 
 
 
@@ -8,6 +8,7 @@ const init = {
     error: "",
     cart: [],
     currentProduct: {},
+    wishlist:[],
   };
   
 
@@ -108,6 +109,104 @@ const init = {
           loading: false,
         };
       }
+
+
+
+ 
+
+      
+      case ADD_PRODUCT_WISH_REQUEST: {
+        return {
+          ...state,
+          error: "",
+          loading: true,
+        };
+      }
+  
+      case ADD_PRODUCT_WISH_SUCCESS: {
+        return {
+          ...state,
+          error: "",
+          wishlist: [...state.wishlist, payload],
+          loading: false,
+        };
+      }
+  
+      case ADD_PRODUCT_WISH_FAILURE: {
+        return {
+          ...state,
+          error: payload,
+          loading: false,
+        };
+      }
+
+
+
+
+
+
+
+      case FETCH_CART_REQUEST: {
+        return {
+          ...state,
+          error: "",
+          loading: true,
+        };
+      }
+  
+      case FETCH_CART_SUCCESS: {
+        return {
+          ...state,
+          error: "",
+          cart: [...payload],
+          loading: false,
+        };
+      }
+  
+      case FETCH_CART_FAILURE: {
+        return {
+          ...state,
+          error: payload,
+          loading: false,
+        };
+      }
+  
+
+
+
+
+
+      case FETCH_WISH_REQUEST: {
+        return {
+          ...state,
+          error: "",
+          loading: true,
+        };
+      }
+  
+      case FETCH_WISH_SUCCESS: {
+        return {
+          ...state,
+          error: "",
+          wishlist: [...payload],
+          loading: false,
+        };
+      }
+  
+      case FETCH_WISH_FAILURE: {
+        return {
+          ...state,
+          error: payload,
+          loading: false,
+        };
+      }
+  
+
+
+
+
+
+
 
 
 
