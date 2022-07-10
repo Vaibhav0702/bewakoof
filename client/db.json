@@ -1,58 +1,17 @@
 {
   "cart": [
     {
-      "id": "5",
-      "gender": "male",
-      "category": "shirt",
-      "image": "https://images.bewakoof.com/t320/floral-rose-white-half-sleeve-shirt-men-s-casual-poplin-aop-shirt-351521-1630409170-1.jpg",
-      "name": "Floral Rose White Half Sleeve Shirt",
-      "price": "499",
-      "canceledprice": "1599",
-      "tribe": "₹ 719 For TriBe Members"
-    },
-    {
-      "id": "6",
-      "gender": "male",
+      "id": "33",
+      "gender": "female",
       "category": "kurta",
-      "image": "https://images.bewakoof.com/t540/men-s-solid-festive-kurta-403790-1634201295-1.jpg",
-      "name": "Men's Solid Festive Kurta",
-      "price": "899",
-      "canceledprice": "1849",
-      "tribe": "₹ 719 For TriBe Members"
-    },
-    {
-      "id": "20",
-      "category": "Tshirt",
-      "gender": "male",
-      "image": "https://images.bewakoof.com/t320/one-with-the-universe-half-sleeve-t-shirt-483037-1648223173-1.jpg",
-      "name": "Men's Blue One With the Universe Graphic Printed T-shirt",
-      "price": "399",
-      "canceledprice": "999",
-      "tribe": "₹ 369 For TriBe Members"
-    }
-  ],
-  "wishlist": [
-    {
-      "id": "18",
-      "gender": "male",
-      "category": "shirt",
-      "image": "https://images.bewakoof.com/t320/campus-sutra-men-s-white-printed-shirt-451415-1637613922-1.jpg",
-      "name": "Floral Rose White Half Sleeve Shirt",
-      "price": "899",
-      "canceledprice": "1499",
-      "tribe": "₹ 719 For TriBe Members"
-    },
-    {
-      "id": "4",
-      "gender": "male",
-      "category": "shirt",
-      "image": "https://images.bewakoof.com/t320/tom-aop-half-sleeve-shirt-men-s-casual-poplin-collab-aop-shirt-351522-1630495479-1.jpg",
-      "name": "Tom & Jerry AOP Half Sleeve Shirt",
+      "image": "https://images.bewakoof.com/t320/women-s-solid-long-kurta-318333-1635870595-1.jpg",
+      "name": "Women's Solid Long Kurta",
       "price": "499",
-      "canceledprice": "1599",
-      "tribe": "₹ 719 For TriBe Members"
+      "canceledprice": "1399",
+      "tribe": "₹ 459 For TriBe Members"
     }
   ],
+  "wishlist": [],
   "orders": [],
   "products": [
     {

@@ -26,13 +26,29 @@ const signInFailure = (payload) => {
   };
 };
 
-const signIn = (payload) => (dispatch) => {
+const signIn = (payload , navigate) => (dispatch) => {
+
   dispatch(signInRequest());
 
   axios
     .post("/api/login", payload, { baseURL: "https://reqres.in" })
-    .then((res) => dispatch(signInSuccess(res.data)))
-    .catch((err) => dispatch(signInFailure(err.data)));
+
+    .then((res) => {
+
+      dispatch(signInSuccess(res.data))
+       
+      alert("Login Successful 🥰")
+
+      navigate("/")
+    
+    
+    })
+    .catch((err) => {
+      dispatch(signInFailure(err.data))
+    
+      alert("Login Failed 🤨")
+    
+    });
 };
 
 export { signIn };

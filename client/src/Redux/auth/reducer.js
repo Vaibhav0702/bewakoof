@@ -10,6 +10,7 @@ const authReducer = (state = init, action) => {
   const { type, payload } = action;
 
   switch (type) {
+    
     case SIGNIN_REQUEST: {
       return {
         auth: false,

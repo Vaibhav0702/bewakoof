@@ -14,6 +14,7 @@ import ListProduct from './ListProduct';
 const ProductDetails = () => {
 
 
+
     const navigate = useNavigate();
 
     const { product_id } = useParams();
@@ -35,22 +36,24 @@ const ProductDetails = () => {
             dispatch(getSingleProduct(product_id, navigate));
         }
 
-    }, [dispatch, navigate, product_id])
+
+
+    }, [dispatch, navigate, product_id] )
 
 
 
     const addToCartHandler = () => {
 
-        currentProduct && dispatch(addProductCart(currentProduct));
+        currentProduct && dispatch(addProductCart(currentProduct ,navigate));
 
-
+      
 
     }
 
 
     const addToWishHandler = () => {
 
-        currentProduct && dispatch(addProductWish(currentProduct));
+        currentProduct && dispatch(addProductWish(currentProduct ,navigate));
 
 
 

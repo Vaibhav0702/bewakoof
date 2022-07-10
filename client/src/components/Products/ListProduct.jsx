@@ -25,7 +25,7 @@ const ListProduct = ({
     return (
         <>
 
-            <Link style={{ textDecoration: "none" }} to={`/products/${product_id}`} >
+              
 
                 <div className='productDabba'   >
 
@@ -37,7 +37,9 @@ const ListProduct = ({
                     <div className="textDabba">
 
                         <div style={{ margin: "0px", color: "silver" }}><h2>Bewakoof</h2></div>
-                        <div className="titleDabba"><h2>{name}</h2></div>
+
+
+                        <Link   style={{textDecoration:"none"}}      to={`/wishlist/${product_id}`}>  <div className="titleDabba"><h2>{name}</h2></div></Link>
 
                         <div className='priceDabba'>
 
@@ -68,7 +70,7 @@ const ListProduct = ({
                                 <button onClick={CartHandler} >
                                     {addtocart}
                                 </button>
-                                <p> {line}</p>
+                                <p>{line}</p>
 
                             </div>
 
@@ -81,9 +83,6 @@ const ListProduct = ({
 
 
                 </div>
-
-
-            </Link>
 
 
         </>

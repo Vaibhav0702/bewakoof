@@ -4,7 +4,8 @@
 import React, { useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCart } from '../../Redux/Products/action';
+import EmptyCart from '../../pages/EmptyCart';
+import { deleteProductCart, fetchCart } from '../../Redux/Products/action';
 import ListProduct from '../Products/ListProduct';
 
 
@@ -15,7 +16,7 @@ const Cart = () => {
     const cart = useSelector((store) => store.ecommerceData.cart);
 
 
-    console.log("cart : ", cart)
+    console.log("cart : ", cart.length)
 
 
 
@@ -32,13 +33,31 @@ const Cart = () => {
 
 
 
+
+    const removeProduct = (id) => {
+  
+        console.log("Going to remove product" , id)
+    
+        dispatch(deleteProductCart(id));
+    
+    
+      }
+
+
+
     const Rating = Math.random().toFixed(1) * ((4 - 2 + 1) + 2);
 
 
     return (
         <>
-
             {
+                 cart.length === 0 ? 
+               
+               <EmptyCart/>
+               
+                 :
+              
+              <>   {
 
                cart && cart.map((currentProduct) => {
 
@@ -59,13 +78,7 @@ const Cart = () => {
 
                         Rating={Rating}
 
-
-
-
-
-
-
-                        
+                        CartHandler={()=>removeProduct(currentProduct.id)}
 
                     />
 
@@ -73,8 +86,10 @@ const Cart = () => {
 
                 })
 
+  
+            } 
 
-
+            </>
 
             }
 

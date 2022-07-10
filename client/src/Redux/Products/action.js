@@ -19,6 +19,12 @@ import {
   GET_SINGLE_PRODUCT_FAILURE,
   GET_SINGLE_PRODUCT_REQUEST,
   GET_SINGLE_PRODUCT_SUCCESS,
+  REMOVE_PRODUCT_CART_FAILURE,
+  REMOVE_PRODUCT_CART_REQUEST,
+  REMOVE_PRODUCT_CART_SUCCESS,
+  REMOVE_PRODUCT_WISH_FAILURE,
+  REMOVE_PRODUCT_WISH_REQUEST,
+  REMOVE_PRODUCT_WISH_SUCCESS,
 } from "./actionTypes";
 
 //-------------getProductsData--------------
@@ -122,30 +128,24 @@ const addProductCartFailure = (payload) => {
   };
 };
 
-const addProductCart = (product) => (dispatch) => {
+const addProductCart = (product, navigate) => (dispatch) => {
   dispatch(addProductCartRequest());
 
   axios
     .post("/cart", product)
     .then((res) => {
+      dispatch(addProductCartSuccess(res.data));
 
-      dispatch(addProductCartSuccess(res.data))
-       
       alert("Product is Successfully Added to cart 😃");
-    
-    })
-    .catch((err) =>{
 
-     dispatch(addProductCartFailure(err.data))
-     alert("Added to cart UnSuccessful 😩");
+      navigate("/cart");
+    })
+    .catch((err) => {
+      dispatch(addProductCartFailure(err.data));
      
+      alert("Added to cart UnSuccessful 😩");
     });
 };
-
-
-
-
-
 
 // ----------------Add to Wishlist
 
@@ -170,34 +170,25 @@ const addProductWishFailure = (payload) => {
   };
 };
 
-const addProductWish = (product) => (dispatch) => {
-
+const addProductWish = (product, navigate) => (dispatch) => {
   dispatch(addProductWishRequest());
 
   axios
     .post("/wishlist", product)
     .then((res) => {
+      dispatch(addProductWishSuccess(res.data));
 
-      dispatch(addProductWishSuccess(res.data))
-       
       alert("Product is Successfully Added to Wishlist 😃");
-    
-    })
-    .catch((err) =>{
 
-     dispatch(addProductWishFailure(err.data))
-     alert("Added to Wishlist UnSuccessful 😩");
-     
+      navigate("/wishlist");
+    })
+    .catch((err) => {
+      dispatch(addProductWishFailure(err.data));
+      alert("Added to Wishlist UnSuccessful 😩");
     });
 };
 
-
-
-
-
-
 // ------------------------get Cart data --------------------
-
 
 const fetchCartRequest = (payload) => {
   return {
@@ -229,15 +220,7 @@ const fetchCart = (payload) => (dispatch) => {
     .catch((err) => dispatch(fetchCartFailure(err.data)));
 };
 
-
-
-
-
-
-
-
 // ------------------------get Wish data --------------------
-
 
 const fetchWishRequest = (payload) => {
   return {
@@ -273,6 +256,95 @@ const fetchWish = (payload) => (dispatch) => {
 
 
 
+// ----------------------remove product from cart---------
+
+const removeProductCartRequest = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_CART_REQUEST,
+    payload,
+  };
+};
+
+const removeProductCartSuccess = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_CART_SUCCESS,
+    payload,
+  };
+};
+
+const removeProductCartFailure = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_CART_FAILURE,
+    payload,
+  };
+};
+
+const deleteProductCart = (id) => (dispatch) => {
+  dispatch(removeProductCartRequest());
+
+  axios
+    .delete(`/cart/${id}`)
+    .then((res) => {
+      console.log(res.data);
+      dispatch(removeProductCartSuccess(res.data));
+
+      alert("Product Successfully removed from Cart 😃 ")
+    })
+    .then(() => dispatch(fetchCart()))
+    .catch((err) => {dispatch(removeProductCartFailure(err.data))
+    
+      alert("Removed Product UnSuccessful 😩");
+    
+    
+    });
+};
+
+
+
+
+
+// ----------------------remove product from Wishlist---------
+
+const removeProductWishRequest = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_WISH_REQUEST,
+    payload,
+  };
+};
+
+const removeProductWishSuccess = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_WISH_SUCCESS,
+    payload,
+  };
+};
+
+const removeProductWishFailure = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_WISH_FAILURE,
+    payload,
+  };
+};
+
+const deleteProductWish = (id) => (dispatch) => {
+  dispatch(removeProductWishRequest());
+
+  axios
+    .delete(`/wishlist/${id}`)
+    .then((res) => {
+      console.log(res.data);
+      dispatch(removeProductWishSuccess(res.data));
+      alert("Product Successfully removed from Wishlist 😃")
+    })
+    .then(() => dispatch(fetchWish()))
+    .catch((err) => {
+
+      dispatch(removeProductWishFailure(err.data))
+      
+      alert("Removed Product UnSuccessful 😩");
+
+    });
+};
 
 
 
@@ -283,4 +355,19 @@ const fetchWish = (payload) => (dispatch) => {
 
 
 
-export { getProductsData, addProductCart, getSingleProduct ,addProductWish  , fetchCart ,fetchWish };
+
+
+
+
+
+
+export {
+  getProductsData,
+  addProductCart,
+  getSingleProduct,
+  addProductWish,
+  fetchCart,
+  fetchWish,
+  deleteProductCart,
+  deleteProductWish
+};

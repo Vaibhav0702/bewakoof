@@ -2,16 +2,19 @@
 
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchWish } from '../../Redux/Products/action';
+import EmptyWish from '../../pages/EmptyWish';
+import { deleteProductWish, fetchWish } from '../../Redux/Products/action';
 import ListProduct from '../Products/ListProduct';
 
 const WishList = () => {
 
 
-
-
-
     const wishlist = useSelector((store) => store.ecommerceData.wishlist);
+
+
+    const currentProduct = useSelector(store => store.ecommerceData.currentProduct);
+
+    console.log("Current Product", currentProduct)
 
 
     console.log("Wish :", wishlist)
@@ -36,47 +39,62 @@ const WishList = () => {
 
 
 
+    const removeProduct = (id) => {
+
+        console.log("Going to remove product", id)
+
+        dispatch(deleteProductWish(id));
+
+
+    }
 
 
     return (
 
 
         <>
-            {
+            {wishlist.length === 0 ? <EmptyWish /> :
+                <> {
 
-                wishlist && wishlist.map((currentProduct) => {
+                    wishlist && wishlist.map((currentProduct) => {
 
-                    return <ListProduct
-                        product_id={currentProduct.id}
+                        return <ListProduct
+                            product_id={currentProduct.id}
 
-                        image={currentProduct.image}
+                            image={currentProduct.image}
 
-                        name={currentProduct.name}
+                            name={currentProduct.name}
 
-                        price={currentProduct.price}
+                            price={currentProduct.price}
 
-                        canceledprice={currentProduct.canceledprice}
+                            canceledprice={currentProduct.canceledprice}
 
-                        tribe={currentProduct.tribe}
+                            tribe={currentProduct.tribe}
 
-                        addtocart={"Remove"}
+                            addtocart={"Add To Cart"}
 
-                        Rating={Rating}
-
-                    />
-
-
-
-                })
+                            Rating={Rating}
 
 
 
+                            wish={<button onClick={() => removeProduct(currentProduct.id)}>Remove</button>}
+
+
+
+                        />
+
+
+
+                    })
+
+
+
+
+                }
+
+                </>
 
             }
-
-
-
-
 
 
         </>
