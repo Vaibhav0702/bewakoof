@@ -1,13 +1,13 @@
 
 
-.filterBox{
+/* .filterContainer{
     border: 1px solid red;
-}
+} */
 
 
-.sortBox{
+/* .sortBox{
     border: 1px solid green;
-}
+} */
 
 .title{
     color: gray;
@@ -18,8 +18,49 @@
 
 .Sortbtn{
     padding: 3%;
-    width: 90%;
+    width: 95%;
     border-radius: 10px;
     margin: 2%;
     align-items: center;
+    cursor: pointer;
+}
+
+.filterBox{
+    /* border: 1px solid green; */
+
+    padding: 10px;
+   
+}
+
+.select{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 3%;
+     font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.selectBox{
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: auto;
+}
+
+
+
+@media (max-width:800px){
+
+    .filterContainer{
+
+       display: flex;
+
+    }
+
+
+
+
+
+
 }

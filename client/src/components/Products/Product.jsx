@@ -1,7 +1,7 @@
 
 
 import React, { useEffect } from 'react'
-import { useState } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 
@@ -17,6 +17,9 @@ const Product = () => {
 
     const products = useSelector((store) => store.ecommerceData.products)
 
+
+
+
     const [searchparams, setSearchParams] = useSearchParams();
 
 
@@ -24,7 +27,9 @@ const Product = () => {
     const dispatch = useDispatch();
 
 
-    console.log("Products ", products)
+
+
+    console.log("Products", products)
 
 
 
@@ -33,27 +38,28 @@ const Product = () => {
 
     useEffect(() => {
 
-     
+
 
         if (products?.length === 0) {
 
             let params = {
-                category: searchparams.getAll("category"),
+                category: searchparams.get("category"),
+                gender: searchparams.get("gender"),
                 _sort: "payment",
                 _order: searchparams.get("Sort"),
 
 
             };
 
-          
-                dispatch(getProductsData(params))
-        
 
-           
+            dispatch(getProductsData(params))
+
+
+
         }
 
 
-      
+
 
 
     }, [dispatch, products?.length, searchparams, setSearchParams])
@@ -81,13 +87,8 @@ const Product = () => {
 
 
         <>
-          
-
+         
                 <div className="ProductContainer">
-
-                    <h1 >Mens Ware</h1>
-
-
 
                     <div className="productBox">
 
@@ -136,11 +137,6 @@ const Product = () => {
                 </div>
 
 
-
-
-
-
-      
         </>
     )
 }
