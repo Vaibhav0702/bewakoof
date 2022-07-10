@@ -1,0 +1,133 @@
+
+.productDabba{
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: auto;
+    display: flex;
+    padding: 3%;
+    cursor: pointer;
+}
+
+.imgDabba{
+    /* border: 1px solid green; */
+    border-radius: 20px;
+    width: 40%;
+    padding: 2%;
+}
+
+.imgDabba>img{
+    width: 100%;
+    border-radius:20px ;
+}
+.textDabba{
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding: 2%;
+    padding-left: 10%;
+
+}
+
+.priceDabba{
+    color: #2d2d2d;
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+  
+    gap:10%
+}
+
+
+.Rating{
+    /* border: 1px solid gray; */
+    width: fit-content;
+    padding: 1%;
+    border-radius: 5px;
+    margin: 2%;
+    background-color: rgb(241, 241, 241);
+
+    
+}
+
+
+
+
+@media (max-width:800px){
+
+
+    
+.productDabba{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding: 3%;
+    /* flex-direction: column;
+} */
+
+
+}
+
+.imgDabba{
+    /* border: 1px solid green; */
+    border-radius: 20px;
+    width: 50%;
+    padding: 2%;
+}
+
+.imgDabba>img{
+    width: 100%;
+    border-radius:20px ;
+}
+.textDabba{
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding: 1%;
+    padding-left: 8%;
+
+}
+
+.priceDabba{
+    color: #2d2d2d;
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+  flex-direction: column;
+    gap:10%
+}
+
+
+.Rating{
+    /* border: 1px solid gray; */
+    width: fit-content;
+    padding: 1%;
+    border-radius: 5px;
+    margin: 2%;
+    background-color: rgb(241, 241, 241);
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -91,17 +91,11 @@
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-
-.ProductPrice{
-
-   display: flex;
+  display: flex;
 
   gap:10%
-  
-
 }
+
 
 
 .Cartdiv{

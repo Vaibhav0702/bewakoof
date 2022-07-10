@@ -9,10 +9,14 @@ import thunk from "redux-thunk";
 
 import productReducer from "./Products/reducer";
 
+import { authReducer } from "./auth/reducer";
+
 
 const rootReducer = combineReducers({
 
   ecommerceData: productReducer,
+
+  authReducer,
 
 });
 

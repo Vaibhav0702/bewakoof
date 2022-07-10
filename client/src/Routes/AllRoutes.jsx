@@ -8,6 +8,8 @@ import WomenHome from '../components/Home/WomenHome'
 
 import AssesoriesHome from "../components/Home/AssesoriesHome"
 import Product from '../components/Products/Product'
+import ProductDetails from '../components/Products/ProductDetails'
+import ErrorPage from '../components/ErrorPage'
 
 const AllRoutes = () => {
   return (
@@ -26,6 +28,12 @@ const AllRoutes = () => {
        <Route path='/women' element={<WomenHome/>}></Route>
 
        <Route path='/assesories' element={<AssesoriesHome/>}></Route>
+
+       <Route path='/products/:product_id' element={<ProductDetails />} />
+
+
+       <Route path='/error' element={<ErrorPage/>} />
+
 
      </Routes>
     
