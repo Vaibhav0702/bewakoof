@@ -1,18 +1,50 @@
 {
   "cart": [
     {
-      "id": "33",
-      "gender": "female",
-      "category": "kurta",
-      "image": "https://images.bewakoof.com/t320/women-s-solid-long-kurta-318333-1635870595-1.jpg",
-      "name": "Women's Solid Long Kurta",
-      "price": "499",
+      "id": "1",
+      "gender": "male",
+      "category": "shirt",
+      "image": "https://images.bewakoof.com/t540/modern-noise-red-checks-shirts-427965-1636955546-1.jpg",
+      "name": "Black Full Sleeve Shirt",
+      "price": "699",
       "canceledprice": "1399",
-      "tribe": "₹ 459 For TriBe Members"
+      "tribe": "₹ 719 For TriBe Members"
     }
   ],
-  "wishlist": [],
-  "orders": [],
+  "wishlist": [
+    {
+      "id": "39",
+      "gender": "female",
+      "category": "shirt",
+      "image": "https://images.bewakoof.com/t320/women-s-all-over-printed-sleeveless-casual-blue-shirt-353220-1638219153-1.jpg",
+      "name": "Women's All Over Printed Sleeveless Casual Blue Shirt",
+      "price": "399",
+      "canceledprice": "1199",
+      "tribe": "₹ 369 For TriBe Members"
+    },
+    {
+      "id": "40",
+      "gender": "female",
+      "category": "shirt",
+      "image": "https://images.bewakoof.com/t320/women-s-solid-sleeveless-casual-orange-shirt-353227-1635870422-6.jpg",
+      "name": "Women's Solid Sleeveless Casual Orange Shirt",
+      "price": "349",
+      "canceledprice": "999",
+      "tribe": "₹ 319 For TriBe Members"
+    }
+  ],
+  "orders": [
+    {
+      "id": "2",
+      "gender": "male",
+      "category": "kurta",
+      "image": "https://images.bewakoof.com/t320/teal-solid-mandarin-neck-long-kurta-437157-1637244552-1.jpg",
+      "name": "Men's Solid Casual Long Kurta",
+      "price": "799",
+      "canceledprice": "1749",
+      "tribe": "₹ 719 For TriBe Members"
+    }
+  ],
   "products": [
     {
       "id": "1",

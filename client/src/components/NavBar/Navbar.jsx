@@ -10,7 +10,13 @@ import { DropdownMen } from "./DropdownMen";
 import { DropdownWomen } from "./DropdownWomen";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductsData } from "../../Redux/Products/action";
+import { fetchCart, fetchOrder, fetchWish, getProductsData } from "../../Redux/Products/action";
+import { Badge } from "@mui/material";
+
+
+
+
+
 
 
 
@@ -25,6 +31,20 @@ export const Navbar = () => {
 
   const products = useSelector((store) => store.ecommerceData.products)
 
+  const cart = useSelector((store) => store.ecommerceData.cart)
+
+  const wish = useSelector((store) => store.ecommerceData.wishlist)
+
+  const orders = useSelector((store) => store.ecommerceData.orders)
+
+  const auth = useSelector((store) => store.authReducer.auth)
+
+  console.log("cart", cart.length)
+
+
+  console.log("orders", orders.length)
+
+
   const [search, setSearch] = useState("");
 
   const dispatch = useDispatch();
@@ -35,6 +55,12 @@ export const Navbar = () => {
 
 
   useEffect(() => {
+
+    dispatch(fetchCart());
+
+    dispatch(fetchOrder());
+
+    dispatch(fetchWish());
 
     if (search.length !== 0) {
 
@@ -47,10 +73,13 @@ export const Navbar = () => {
 
       dispatch(getProductsData(params))
 
+
+
+
+
     }
 
   }, [dispatch, products?.length, search, setSearch])
-
 
 
 
@@ -86,9 +115,19 @@ export const Navbar = () => {
 
           <div>
 
-            <Link className="no" to="/orders">
-              myOrders
-            </Link>
+            {
+              auth ? <Link className="no" to="/orders">
+                <Badge color="success" badgeContent={orders.length} overlap="circular">
+                  myOrders
+                </Badge>
+              </Link> :
+                <Link className="no" to="/orders">myOrders</Link>
+
+            }
+
+
+
+
 
           </div>
 
@@ -111,12 +150,26 @@ export const Navbar = () => {
 
             <div>
               <Link className="no1" to="/wishlist">
-                <FavoriteIcon className="icon-navbar" fontSize="large" />
+                {
+                  auth ? <Badge color="success" badgeContent={wish.length} overlap="circular">
+                    <FavoriteIcon className="icon-navbar" fontSize="large" />
+                  </Badge> :
+                    <FavoriteIcon className="icon-navbar" fontSize="large" />
+                }
+
+
               </Link>
             </div>
             <div>
               <Link className="no1" to="/cart">
-                <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+                {
+                  auth ? <Badge color="success" badgeContent={wish.length} overlap="circular">
+                       <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+                  </Badge>
+                  :
+                  <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+                }
+             
               </Link>
             </div>
           </div>
@@ -216,15 +269,47 @@ export const Navbar = () => {
             {mobileHovering && <DropdownMobile />}
           </li>
 
-          <li>
+          {
 
-            <Link className="no" to="/orders">
-              myOrders
-            </Link>
+            auth ? <Badge color="success" badgeContent={orders.length} overlap="circular">
 
-          </li>
+              <li>
 
 
+                <Link className="no" to="/orders">
+
+                  myOrders
+
+
+                </Link>
+
+
+
+              </li>
+
+            </Badge> :
+
+
+              <li>
+
+
+                <Link className="no" to="/orders">
+
+                  myOrders
+
+
+                </Link>
+
+
+
+              </li>
+
+
+
+
+
+
+          }
 
 
 
@@ -283,13 +368,43 @@ export const Navbar = () => {
 
 
             <div>
+
               <Link className="no1" to="/wishlist">
-                <FavoriteIcon className="icon-navbar" fontSize="large" />
+
+                {
+
+                  auth ? <Badge color="success" badgeContent={wish.length} overlap="circular">
+
+                    <FavoriteIcon className="icon-navbar" fontSize="large" />
+                  </Badge> :
+                    <FavoriteIcon className="icon-navbar" fontSize="large" />
+
+                }
+
+
               </Link>
             </div>
+
+
+
+
+
             <div>
               <Link className="no1" to="/cart">
-                <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+
+                {
+                  auth ?
+                    <Badge color="success" badgeContent={cart.length} overlap="circular">
+
+                      <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+
+                    </Badge> :
+                    <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+
+                }
+
+
+
               </Link>
             </div>
 
