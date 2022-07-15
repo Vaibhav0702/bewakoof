@@ -1,15 +1,24 @@
 import axios from "axios";
 
 import {
+  ADD_ORDER_FAILURE,
+  ADD_ORDER_REQUEST,
+  ADD_ORDER_SUCCESS,
   ADD_PRODUCT_CART_FAILURE,
   ADD_PRODUCT_CART_REQUEST,
   ADD_PRODUCT_CART_SUCCESS,
   ADD_PRODUCT_WISH_FAILURE,
   ADD_PRODUCT_WISH_REQUEST,
   ADD_PRODUCT_WISH_SUCCESS,
+  EMPTY_CART_FAILURE,
+  EMPTY_CART_REQUEST,
+  EMPTY_CART_SUCCESS,
   FETCH_CART_FAILURE,
   FETCH_CART_REQUEST,
   FETCH_CART_SUCCESS,
+  FETCH_ORDERS_FAILURE,
+  FETCH_ORDERS_REQUEST,
+  FETCH_ORDERS_SUCCESS,
   FETCH_WISH_FAILURE,
   FETCH_WISH_REQUEST,
   FETCH_WISH_SUCCESS,
@@ -349,11 +358,121 @@ const deleteProductWish = (id) => (dispatch) => {
 
 
 
+// --------------- add orders
+
+
+const addOrderRequest = (payload) => {
+  return {
+    type: ADD_ORDER_REQUEST,
+    payload,
+  };
+};
+
+const addOrderSuccess = (payload) => {
+  return {
+    type: ADD_ORDER_SUCCESS,
+    payload,
+  };
+};
+
+const addOrderFailure = (payload) => {
+  return {
+    type: ADD_ORDER_FAILURE,
+    payload,
+  };
+};
+
+const addOrder = (payload) => (dispatch) => {
+  dispatch(addOrderRequest());
+
+  const orderPayload = [];
+
+  for (let product of payload) {
+    product && orderPayload.push(axios.post("/orders", product)); // we cant directly add all orders thats whats why we add one by one
+  }
+
+  Promise.all(orderPayload)
+    .then((res) => dispatch(addOrderSuccess()))
+    .then(() => dispatch(emptyCart(payload))) // it makes cart empty after add order
+    .catch((err) => dispatch(addOrderFailure())); // resolve all promises of orderPayload
+};
+
+
+
+// ----------------------after order make  empty cart
+
+
+const emptyCartRequest = (payload) => {
+  return {
+    type: EMPTY_CART_REQUEST,
+    payload,
+  };
+};
+
+const emptyCartSuccess = (payload) => {
+  return {
+    type: EMPTY_CART_SUCCESS,
+    payload,
+  };
+};
+
+const emptyCartFailure = (payload) => {
+  return {
+    type: EMPTY_CART_FAILURE,
+    payload,
+  };
+};
+
+const emptyCart = (payload) => (dispatch) => {
+  dispatch(emptyCartRequest());
+
+  const deleteOrder = [];
+
+  for (let obj of payload) {
+    let temp = dispatch(deleteProductCart(obj.id)); // delete product
+
+    deleteOrder.push(temp);
+  }
+
+  Promise.all(deleteOrder)
+    .then((res) => dispatch(emptyCartSuccess()))
+    .catch((err) => dispatch(emptyCartFailure()));
+};
 
 
 
 
+// ---------------------fetch orders
 
+const fetchOrderRequest = (payload) => {
+  return {
+    type: FETCH_ORDERS_REQUEST,
+    payload,
+  };
+};
+
+const fetchOrderSuccess = (payload) => {
+  return {
+    type: FETCH_ORDERS_SUCCESS,
+    payload,
+  };
+};
+
+const fetchOrderFailure = (payload) => {
+  return {
+    type: FETCH_ORDERS_FAILURE,
+    payload,
+  };
+};
+
+const fetchOrder = (payload) => (dispatch) => {
+  dispatch(fetchOrderRequest());
+
+  axios
+    .get("/orders")
+    .then((res) => dispatch(fetchOrderSuccess(res.data)))
+    .catch((err) => dispatch(fetchOrderFailure(err.data)));
+};
 
 
 
@@ -369,5 +488,8 @@ export {
   fetchCart,
   fetchWish,
   deleteProductCart,
-  deleteProductWish
+  deleteProductWish,
+  addOrder,
+  emptyCart,
+  fetchOrder
 };

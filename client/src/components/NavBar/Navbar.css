@@ -19,9 +19,9 @@
    display: flex;
    align-self: center;
    justify-content: space-between;
-   margin-right: 250px;
+   /* margin-right: 250px; */
 
-   /* border: 1px solid yellow; */
+   /* border: 1px solid red; */
 
 }
 
@@ -223,6 +223,8 @@
 .NavleftM{
   /* border: 1px solid red; */
   padding: 10px;
+  display: flex;
+  font-size: 50%;
 }
 
 

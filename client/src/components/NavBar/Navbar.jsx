@@ -84,17 +84,30 @@ export const Navbar = () => {
             </Link>
           </div>
 
+          <div>
+
+            <Link className="no" to="/orders">
+              myOrders
+            </Link>
+
+          </div>
+
+
+
+
 
         </div>
 
         <div className="NavrightM">
           <div className="mbRightM">
+
             <div>
 
               <Link className="no1" style={{ textDecoration: "none" }} to="/login">
                 <p style={{ margin: "3px" }} > Login</p>
               </Link>
             </div>
+
 
             <div>
               <Link className="no1" to="/wishlist">
@@ -202,6 +215,19 @@ export const Navbar = () => {
             </Link>
             {mobileHovering && <DropdownMobile />}
           </li>
+
+          <li>
+
+            <Link className="no" to="/orders">
+              myOrders
+            </Link>
+
+          </li>
+
+
+
+
+
         </ul>
 
         <div className="Navright">
@@ -215,7 +241,7 @@ export const Navbar = () => {
             <input
               className="searchbox"
               type="text"
-              placeholder="search by product, category or collection 🧐"
+              placeholder="search by product or category 🧐"
 
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -230,7 +256,7 @@ export const Navbar = () => {
 
                       <div>
 
-                        <Link style={{ textDecoration: "none" }} to={`/products/${e.id}`}  onClick={()=>setSearch("")}   >  {e.name} </Link>
+                        <Link style={{ textDecoration: "none" }} to={`/products/${e.id}`} onClick={() => setSearch("")}   >  {e.name} </Link>
 
 
 
@@ -255,6 +281,7 @@ export const Navbar = () => {
               </Link>
             </div>
 
+
             <div>
               <Link className="no1" to="/wishlist">
                 <FavoriteIcon className="icon-navbar" fontSize="large" />
@@ -265,6 +292,12 @@ export const Navbar = () => {
                 <ShoppingBagIcon className="icon-navbar" fontSize="large" />
               </Link>
             </div>
+
+
+
+
+
+
           </div>
         </div>
       </div>

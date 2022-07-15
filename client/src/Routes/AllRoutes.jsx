@@ -15,6 +15,7 @@ import WishList from '../components/Wishlist/WishList'
 import Login from '../components/Login/Login'
 
 import AuthWrapper from '../components/Login/AuthWraper'
+import Orders from '../components/Orders/Orders'
 
 const AllRoutes = () => {
   return (
@@ -40,7 +41,7 @@ const AllRoutes = () => {
         <Route path='/cart' element={<AuthWrapper> <Cart /> </AuthWrapper>} />
 
 
-        <Route path='/wishlist' element={<AuthWrapper> <WishList /></AuthWrapper>  } />
+        <Route path='/wishlist' element={<AuthWrapper> <WishList /></AuthWrapper>} />
 
 
         <Route path='/wishlist/:product_id' element={<ProductDetails />} />
@@ -53,6 +54,10 @@ const AllRoutes = () => {
 
         <Route path='/error' element={<ErrorPage />} />
 
+   
+        <Route path='/orders' element={<Orders />} />
+
+    
 
       </Routes>
 
