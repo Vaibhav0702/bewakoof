@@ -101,6 +101,45 @@
  
 }
 
+.searchbox1{
+ 
+  width: 300px;
+ cursor: pointer;
+ padding: 10px;
+  
+
+  height: 500px;
+
+   font-size: 15px;
+  opacity: 100%;
+  background-color: rgb(245, 243, 243);
+  position: absolute;
+  overflow: scroll;
+ 
+}
+.searchbox1 >div{
+
+  overflow: hidden;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+
+}
+
+
+
+.searchbox1>div:hover{
+  cursor: pointer;
+  background-color: rgb(157, 228, 228);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+
+
+
+
+
 .icon-navbar{
   color: #0ba0a0;
 }

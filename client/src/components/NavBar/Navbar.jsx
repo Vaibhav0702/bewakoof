@@ -8,6 +8,9 @@ import { useState } from "react";
 import { DropdownMobile } from "./DropdownMobile";
 import { DropdownMen } from "./DropdownMen";
 import { DropdownWomen } from "./DropdownWomen";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getProductsData } from "../../Redux/Products/action";
 
 
 
@@ -20,8 +23,45 @@ export const Navbar = () => {
   const [womenHovering, setWomenHovering] = useState(false);
 
 
+  const products = useSelector((store) => store.ecommerceData.products)
 
-  
+  const [search, setSearch] = useState("");
+
+  const dispatch = useDispatch();
+
+  console.log("navProducts", products)
+
+  console.log(search);
+
+
+  useEffect(() => {
+
+    if (search.length !== 0) {
+
+      let params = {
+
+        q: search
+
+
+      };
+
+      dispatch(getProductsData(params))
+
+    }
+
+  }, [dispatch, products?.length, search, setSearch])
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
 
@@ -170,11 +210,42 @@ export const Navbar = () => {
             <span className="icon">
               <SearchIcon />
             </span>
+
+
             <input
               className="searchbox"
               type="text"
               placeholder="search by product, category or collection 🧐"
+
+              onChange={(e) => setSearch(e.target.value)}
             />
+
+
+            {
+              search ? <div className="searchbox1"  >
+                {
+                  products.map((e) => {
+                    return <>
+
+
+                      <div>
+
+                        <Link style={{ textDecoration: "none" }} to={`/products/${e.id}`}  onClick={()=>setSearch("")}   >  {e.name} </Link>
+
+
+
+                      </div>
+
+
+
+                    </>
+                  })
+                }
+              </div> : ""
+            }
+
+
+
           </div>
           <div className="mbRight">
             <div>
