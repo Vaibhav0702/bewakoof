@@ -92,18 +92,44 @@ const Menhome = () => {
 
 
                             <div className='caraDiv'>
-                                <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/active-wear-play-banner-new-1656938195.jpg" alt="" />
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/active-wear-play-banner-new-1656938195.jpg" alt="" />
+                                </Link>
                             </div>
-                            <div className='caraDiv'>  <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Just-Arrived-Chino-Joggers-Men-1657087871.gif" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Just-Arrived-Chino-Joggers-Men-1657087871.gif" alt="" />
+                                </Link>
+                            </div>
 
 
-                            <div className='caraDiv'> <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-m-1656399231.jpg" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-m-1656399231.jpg" alt="" />
 
-                            <div className='caraDiv'> <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/active-wear-play-banner-new-1656938195.jpg" alt="" /></div>
+                                </Link>
+                            </div>
 
-                            <div className='caraDiv'>    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Just-Arrived-Chino-Joggers-Men-1657087871.gif" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/active-wear-play-banner-new-1656938195.jpg" alt="" />
+                                </Link>
+                            </div>
 
-                            <div className='caraDiv'>                <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-m-1656399231.jpg" alt="" /></div>
+                            <div className='caraDiv'>
+
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Just-Arrived-Chino-Joggers-Men-1657087871.gif" alt="" />
+                                </Link>
+                            </div>
+
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-m-1656399231.jpg" alt="" />
+
+                                </Link>
+                            </div>
 
 
 
@@ -126,21 +152,21 @@ const Menhome = () => {
                     <div className="catagories">
 
 
-                      
 
 
 
-                            <div>
 
-                                <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-best-seller-1637307127.jpg" alt="" />
+                        <div>
 
-
-                                <Link to={"/product"} > <p>Best Seller</p>   </Link>
-
-                            </div>
+                            <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-best-seller-1637307127.jpg" alt="" />
 
 
-                     
+                            <Link to={"/product"} style={{ textDecoration: "none" }} > <p>Best Seller</p>   </Link>
+
+                        </div>
+
+
+
 
 
 

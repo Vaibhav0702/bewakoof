@@ -55,7 +55,7 @@ const AllRoutes = () => {
         <Route path='/error' element={<ErrorPage />} />
 
    
-        <Route path='/orders' element={<Orders />} />
+        <Route path='/orders' element={<AuthWrapper>  <Orders /> </AuthWrapper>  } />
 
     
 

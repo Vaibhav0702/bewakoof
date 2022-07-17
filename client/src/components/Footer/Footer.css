@@ -242,11 +242,11 @@ justify-content: space-evenly;
         display: grid;
         grid-template-columns: repeat(2,1fr);
        
-        /* border: 1px solid rgb(255, 255, 255); */
+        border: 1px solid rgb(255, 255, 255);
        width: 85%;
        padding: 10px;
        margin: auto;
-    
+    overflow: hidden;
        
     }
   
@@ -254,7 +254,7 @@ justify-content: space-evenly;
     .row2{
         /* border: 1px solid cyan; */
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
         width:100%;
         margin: auto;
      

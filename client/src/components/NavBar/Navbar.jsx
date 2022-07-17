@@ -108,7 +108,7 @@ export const Navbar = () => {
             <Link to="/">
               <img
                 src="https://images.bewakoof.com/web/ic-web-head-bwk-primary-logo-eyes.svg"
-                alt="bewakoof-logo" style={{ width: "50px" }}
+                alt="bewakoof-logo" style={{ width: "100%" }}
               />
             </Link>
           </div>
@@ -116,12 +116,12 @@ export const Navbar = () => {
           <div>
 
             {
-              auth ? <Link className="no" to="/orders">
+              auth ? <Link className="no" style={{textDecoration:"none" ,fontSize:"80%"  }} to="/orders">
                 <Badge color="success" badgeContent={orders.length} overlap="circular">
                   myOrders
                 </Badge>
               </Link> :
-                <Link className="no" to="/orders">myOrders</Link>
+                <Link className="no" style={{textDecoration:"none",fontSize:"80%" }} to="/orders">myOrders</Link>
 
             }
 
@@ -143,7 +143,7 @@ export const Navbar = () => {
             <div>
 
               <Link className="no1" style={{ textDecoration: "none" }} to="/login">
-                <p style={{ margin: "3px" }} > Login</p>
+                <p style={{ margin: "5%" }} > Login</p>
               </Link>
             </div>
 
@@ -152,9 +152,9 @@ export const Navbar = () => {
               <Link className="no1" to="/wishlist">
                 {
                   auth ? <Badge color="success" badgeContent={wish.length} overlap="circular">
-                    <FavoriteIcon className="icon-navbar" fontSize="large" />
+                    <FavoriteIcon className="icon-navbar" fontSize="medium" />
                   </Badge> :
-                    <FavoriteIcon className="icon-navbar" fontSize="large" />
+                    <FavoriteIcon className="icon-navbar" fontSize="medium" />
                 }
 
 
@@ -164,10 +164,10 @@ export const Navbar = () => {
               <Link className="no1" to="/cart">
                 {
                   auth ? <Badge color="success" badgeContent={wish.length} overlap="circular">
-                       <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+                       <ShoppingBagIcon className="icon-navbar" fontSize="medium" />
                   </Badge>
                   :
-                  <ShoppingBagIcon className="icon-navbar" fontSize="large" />
+                  <ShoppingBagIcon className="icon-navbar" fontSize="medium" />
                 }
              
               </Link>
@@ -241,7 +241,7 @@ export const Navbar = () => {
 
             className="NavleftM"
           >
-            <Link className="no" to="/men">
+            <Link className="no" style={{textDecoration:"none" }} to="/men">
               {" "}
               MEN
             </Link>
@@ -253,7 +253,7 @@ export const Navbar = () => {
             onMouseEnter={() => setWomenHovering(true)}
             onMouseLeave={() => setWomenHovering(false)}
           >
-            <Link className="no" to="/women">
+            <Link className="no" style={{textDecoration:"none" }} to="/women">
               WOMEN
             </Link>
             {womenHovering && <DropdownWomen />}
@@ -263,7 +263,7 @@ export const Navbar = () => {
             onMouseEnter={() => setMobileHovering(true)}
             onMouseLeave={() => setMobileHovering(false)}
           >
-            <Link className="no" to="/assesories">
+            <Link className="no" style={{textDecoration:"none" }} to="/assesories">
               ACCESSORIES
             </Link>
             {mobileHovering && <DropdownMobile />}
@@ -276,7 +276,7 @@ export const Navbar = () => {
               <li>
 
 
-                <Link className="no" to="/orders">
+                <Link className="no" style={{textDecoration:"none" }}  to="/orders">
 
                   myOrders
 
@@ -293,7 +293,7 @@ export const Navbar = () => {
               <li>
 
 
-                <Link className="no" to="/orders">
+                <Link className="no" style={{textDecoration:"none" }}  to="/orders">
 
                   myOrders
 

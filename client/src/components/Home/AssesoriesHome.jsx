@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Link } from 'react-router-dom';
 
 
 import "./MenHome.css"
@@ -96,23 +97,59 @@ const AssesoriesHome = () => {
                         >
 
 
-                            <div className='caraDiv'> <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/ezgif-com-gif-maker--1--1651324109.gif" alt="" /></div>
-                            <div className='caraDiv'><img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-common-1656399230.jpg" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/ezgif-com-gif-maker--1--1651324109.gif" alt="" />
+                                </Link>
+                            </div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-common-1656399230.jpg" alt="" />
+                                </Link>
+                            </div>
 
-                            <div className='caraDiv'>  <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/designer-cover-city-1656070119.jpg" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/designer-cover-city-1656070119.jpg" alt="" />
+                                </Link>
+                            </div>
 
 
-                            <div className='caraDiv'> <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/unnamed-1656056673.gif" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/unnamed-1656056673.gif" alt="" />
+
+                                </Link>
+                            </div>
 
 
-                            <div className='caraDiv'> <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/ezgif-com-gif-maker--1--1651324109.gif" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/ezgif-com-gif-maker--1--1651324109.gif" alt="" />
+                                </Link>
+                            </div>
 
-                            <div className='caraDiv'><img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-common-1656399230.jpg" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/clearance-sale-1x1-common-1656399230.jpg" alt="" />
 
-                            <div className='caraDiv'>  <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/designer-cover-city-1656070119.jpg" alt="" /></div>
+                                </Link>
+                            </div>
+
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/designer-cover-city-1656070119.jpg" alt="" />
+
+                                </Link>
+                            </div>
 
 
-                            <div className='caraDiv'> <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/unnamed-1656056673.gif" alt="" /></div>
+                            <div className='caraDiv'>
+                                <Link to={"/product"} style={{ textDecoration: "none" }} >
+                                    <img style={{ width: "100%" }} src="https://images.bewakoof.com/uploads/grid/app/unnamed-1656056673.gif" alt="" />
+                                </Link>
+                            </div>
 
 
 
