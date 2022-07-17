@@ -2,7 +2,8 @@
 
 
 .caraDiv{
-    margin-right: 30px;
+    margin-right: 1%;
+    margin-left: 1%;
 }
 
 
@@ -174,7 +175,8 @@
   
     
     .caraDiv{
-        margin-right: 30px;
+        margin-right: 1%;
+        margin-left: 1%;
     }
 
    .pageContainer{
@@ -195,23 +197,23 @@
     justify-content: center;
     
      width: 100%;
-     font-size: 80%;
-    gap: 10px;
+  
+    gap: 2%;
 
     margin-top: 3%;
 }
 
-.catagories >div{
+.catagories>div{
     /* border: 1px solid blue; */
     text-align: center;
-    font-size: 60%;
     font-weight: bold;
+    font-size: 1%;
    
 }
 
-.catagories > div >img{
+.catagories>div>img{
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -222,6 +224,7 @@
     /* border: 1px solid red; */
     text-align: center;
     cursor: pointer;
+    width: 100%;
 }
 
 .CatoriesBox{
