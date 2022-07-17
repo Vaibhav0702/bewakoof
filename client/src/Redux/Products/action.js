@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 import {
   ADD_ORDER_FAILURE,
   ADD_ORDER_REQUEST,
@@ -31,6 +32,9 @@ import {
   REMOVE_PRODUCT_CART_FAILURE,
   REMOVE_PRODUCT_CART_REQUEST,
   REMOVE_PRODUCT_CART_SUCCESS,
+  REMOVE_PRODUCT_ORDER_FAILURE,
+  REMOVE_PRODUCT_ORDER_REQUEST,
+  REMOVE_PRODUCT_ORDER_SUCCESS,
   REMOVE_PRODUCT_WISH_FAILURE,
   REMOVE_PRODUCT_WISH_REQUEST,
   REMOVE_PRODUCT_WISH_SUCCESS,
@@ -382,7 +386,7 @@ const addOrderFailure = (payload) => {
   };
 };
 
-const addOrder = (payload) => (dispatch) => {
+const addOrder = (payload ,navigate) => (dispatch) => {
   dispatch(addOrderRequest());
 
   const orderPayload = [];
@@ -392,10 +396,66 @@ const addOrder = (payload) => (dispatch) => {
   }
 
   Promise.all(orderPayload)
-    .then((res) => dispatch(addOrderSuccess()))
+    .then(() => dispatch(addOrderSuccess()))
     .then(() => dispatch(emptyCart(payload))) // it makes cart empty after add order
+    .then(()=>displayRazorpay(navigate))
     .catch((err) => dispatch(addOrderFailure())); // resolve all promises of orderPayload
 };
+
+// ----------------------payment Getway----
+
+const displayRazorpay = async(navigate)=>{
+
+  const data = await fetch("https://bewakoofdatabank.herokuapp.com/razorpay", {
+
+     method: "POST",
+    
+
+  }).then((t) => t.json());
+
+  console.log(data);
+
+  const options = {
+
+    key: "rzp_test_b7gpoyjWVrzTz1",
+
+    currency: data.currency,
+
+    amount: data.amount,
+
+    name: "Bewakoof",
+
+    description: "Wallet Transaction",
+
+    image: "http://localhost:5000/logo.png",
+
+    order_id: data.id,
+
+    handler: function (response) {
+      alert("Payment Successfull 🥳 - ID ::" + response.razorpay_payment_id);
+    
+      setTimeout(()=>{
+
+        alert("Enjoy Your Order 😜 - ID :: " + response.razorpay_order_id);
+
+      },1000)
+     
+
+      navigate("/")
+
+     
+    },
+    prefill: {
+      name: "Vaibhav Ginnalwar",
+      email: "vaibhavginnalwar@gmail.com",
+      contact: "8857098923",
+    },
+  };
+
+  const paymentObject = new window.Razorpay(options);
+  
+  paymentObject.open();
+}
 
 
 
@@ -476,6 +536,50 @@ const fetchOrder = (payload) => (dispatch) => {
 
 
 
+// ----------------------remove product from Wishlist---------
+
+const removeProductOrderRequest = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_ORDER_REQUEST,
+    payload,
+  };
+};
+
+const removeProductOrderSuccess = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_ORDER_SUCCESS,
+    payload,
+  };
+};
+
+const removeProductOrderFailure = (payload) => {
+  return {
+    type: REMOVE_PRODUCT_ORDER_FAILURE,
+    payload,
+  };
+};
+
+const deleteProductOrder = (id) => (dispatch) => {
+  dispatch(removeProductOrderRequest());
+
+  axios
+    .delete(`/orders/${id}`)
+    .then((res) => {
+      console.log(res.data);
+      dispatch(removeProductOrderSuccess(res.data));
+      alert("Product Successfully removed from MyOrders 😃")
+    })
+    .then(() => dispatch(fetchOrder()))
+    .catch((err) => {
+
+      dispatch(removeProductOrderFailure(err.data))
+      
+      alert("Removed Product UnSuccessful 😩");
+
+    });
+};
+
+
 
 
 
@@ -491,5 +595,7 @@ export {
   deleteProductWish,
   addOrder,
   emptyCart,
-  fetchOrder
+  fetchOrder,
+  displayRazorpay,
+  deleteProductOrder
 };

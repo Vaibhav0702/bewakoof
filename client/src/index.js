@@ -12,9 +12,10 @@ import { store } from './Redux/store';
 
 
 
-// axios.defaults.baseURL = "https://dataserverbank.herokuapp.com";
+axios.defaults.baseURL = "https://bewakoofdatabank.herokuapp.com";
 
-axios.defaults.baseURL = "http://localhost:8080";
+
+// axios.defaults.baseURL = "http://localhost:8080";
 
 
 axios.defaults.headers.post["Content-Type"] = "application/json";

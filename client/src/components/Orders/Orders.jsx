@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import EmptyCart from '../../pages/EmptyCart';
-import { fetchOrder } from '../../Redux/Products/action';
+import { deleteProductOrder, fetchOrder } from '../../Redux/Products/action';
 import ListProduct from '../Products/ListProduct';
 
 const Orders = () => {
@@ -17,6 +17,17 @@ const Orders = () => {
         dispatch(fetchOrder());
 
     }, [dispatch])
+
+
+
+    const removeProduct = (id) => {
+
+        console.log("Going to remove product", id)
+
+        dispatch(deleteProductOrder(id));
+
+
+    }
 
 
     const Rating = Math.random().toFixed(1) * ((4 - 2 + 1) + 2);
@@ -54,7 +65,9 @@ const Orders = () => {
 
                                 Rating={Rating}
 
-                              
+                                wish={<button onClick={() => removeProduct(currentProduct.id)}>Remove</button>}
+
+
                             />
 
 
