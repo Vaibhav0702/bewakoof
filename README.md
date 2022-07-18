@@ -15,9 +15,9 @@ Individual Projects At Masai School.
 7. Netlify
 
 
-**About Website :**
+# About Website :
 
-**Navbar & Landing page**
+# Navbar & Landing page
 
 ![Bewakoof Navbar](https://user-images.githubusercontent.com/97450767/179463648-fd68d26f-df92-4595-b21a-26b978df8387.png)
 
@@ -28,7 +28,7 @@ Individual Projects At Masai School.
 ![Bewakoof Landing3](https://user-images.githubusercontent.com/97450767/179465093-3f2aae06-1927-4e4a-979c-dd87038cd234.png)
 
 
-**DropDown & SearchBar**
+# DropDown & SearchBar
 
 ![Bewakoof Dropdown](https://user-images.githubusercontent.com/97450767/179465607-ab7901de-06ae-4462-901a-21856eb1ceaa.png)
 
@@ -37,23 +37,23 @@ Individual Projects At Masai School.
 
 
 
-**Product page**
+# Product page
 
 ![Bewakoof ProductPage](https://user-images.githubusercontent.com/97450767/179465906-e0a9bac9-7bc1-4936-98d3-c2b68cd1f512.png)
 
 
-**ProductDetails page**
+# ProductDetails page
 
 ![Bewakoof ProductDetails](https://user-images.githubusercontent.com/97450767/179466323-5da7464c-e3fb-4919-b418-c2b8af47ffff.png)
 
-**Login page**
+# Login page
 
 ![Bewakoof Login](https://user-images.githubusercontent.com/97450767/179466135-21fe9415-2c89-4b16-9afc-b8ffd746f724.png)
 
 
 
 
-**Cart page**
+# Cart page
 
 ![Bewakoof Cart1](https://user-images.githubusercontent.com/97450767/179466483-da54e829-f3eb-4637-add7-4ef67103f819.png)
 
@@ -62,25 +62,25 @@ Individual Projects At Masai School.
 
 
 
-**Wishlist page**
+# Wishlist page
 
 ![Bewakoof Wish](https://user-images.githubusercontent.com/97450767/179467048-8cff86a4-ed06-412c-a2f8-0a9b77115b40.png)
 
 ![Bewakoof Wish2](https://user-images.githubusercontent.com/97450767/179467199-c97fa04c-d283-4c9a-8c44-4acf90c2ee04.png)
 
 
-**myOrders page**
+# myOrders page
 
 ![Bewakoof Order](https://user-images.githubusercontent.com/97450767/179467344-03938426-eba3-44c4-b21c-b26b0fc07da5.png)
 
 
-**Footer**
+# Footer
 
 ![Bewakoof Footer](https://user-images.githubusercontent.com/97450767/179467385-3209c1d2-a7b9-46b1-bc63-ab2f32596660.png)
 
 
 
-**Payment Getway**
+# Payment Getway
 
 ![Bewakoof Payment1](https://user-images.githubusercontent.com/97450767/179467521-7a8535dc-180a-46e8-9281-58b8947b3f1b.png)
 
