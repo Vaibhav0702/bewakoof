@@ -15,6 +15,24 @@ Individual Projects At Masai School.
 7. Netlify
 
 
+## Instructions to Run the Website
+
+#### Note:
+
+I was created database using Json-Server and deployed it on heroku and the frontend part of the website is deployed on netlify. you can see the website by clicking on link provided.
+
+**Links for reference :**
+
+Netlify Link :
+https://mybewakoof.netlify.app/
+
+Heroku Link :
+https://bewakoofdatabank.herokuapp.com/
+
+Repo Link :
+https://github.com/Vaibhav0702/bewakoof
+
+
 # About Website :
 
 # Navbar & Landing page
@@ -89,22 +107,5 @@ Individual Projects At Masai School.
 ![Bewakoof payment3](https://user-images.githubusercontent.com/97450767/179468329-aa67d9eb-871c-450a-bad5-41af62815887.png)
 
 
-
-## Instructions to Run the Website
-
-#### Note:
-
-I was created database using Json-Server and deployed it on heroku and the frontend part of the website is deployed on netlify. you can see the website by clicking on link provided.
-
-**Links for reference :**
-
-Netlify Link :
-https://mybewakoof.netlify.app/
-
-Heroku Link :
-https://bewakoofdatabank.herokuapp.com/
-
-Repo Link :
-https://github.com/Vaibhav0702/bewakoof
 
 
