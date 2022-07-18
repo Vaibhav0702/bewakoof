@@ -15,6 +15,17 @@ Individual Projects At Masai School.
 7. Netlify
 
 
+# Features:
+
+1. Responsive for mobile and tabs .
+2. Navbar with dropdown menu and search functionality.
+3. Landing page with sliders.
+4. Product page with Filter and Sort functionality.
+6. Product Details page with add to cart , add to wishlist functionality.
+7. wishlist page with remove from wishlist & Add to cart functionality and myOrder page with remove functionality.
+8. Cart page with remove from cart functionality and checkout functionality with payment getway.
+
+
 ## Instructions to Run the Website
 
 #### Note:
