@@ -21,7 +21,9 @@ export const Footer = () => {
          
             <div className="col">
             <div  style={{ paddingLeft:"10%"     }}    >  <h1 style={{color:"yellow"  , margin:"0px"}} >Bewakoof</h1></div>
+
               <div className="row1">
+
                 <div className="col1">
 
                   
@@ -41,7 +43,8 @@ export const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col1">
+
+                <div className="col1"   >
                   <h2>COMPANY</h2>
                   <ul>
                     <li>
@@ -61,7 +64,8 @@ export const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col1">
+
+                <div className="col1" id="Rowcol3"  >
                   <h2>CONNECT WITH US</h2>
                   <ul>
                     <li>
@@ -85,7 +89,8 @@ export const Footer = () => {
 
                   </ul>
                 </div>
-                <div className="col1">
+
+                <div className="col1" id="Rowcol4">
                   <h2>KEEP UP TO DATE</h2>
                   <input
                     className="email"
@@ -94,6 +99,7 @@ export const Footer = () => {
                   />
                   <button className="subscribe">SUBSCRIBE</button>
                 </div>
+
               </div>
             </div>
           </div>

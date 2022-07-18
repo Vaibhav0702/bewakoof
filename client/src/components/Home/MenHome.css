@@ -193,12 +193,12 @@
    .catagories{
     /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(4,1fr);
     justify-content: center;
     
      width: 100%;
   
-    gap: 2%;
+    gap: 3%;
 
     margin-top: 3%;
 }
@@ -230,7 +230,7 @@
 .CatoriesBox{
     /* border: 1px solid blue; */
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(3,1fr);
     justify-content: center;
     width: 100%;
     margin: auto;
@@ -257,13 +257,98 @@
 
 
 
+.BargainContainer{
+    /* border: 1px solid red; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.BargainBox{
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+
+    gap: 10px;
+}
+
+.BargainBox>div{
+
+   
+   /* border: 1px solid green; */
+   text-align: center;
+  
+  cursor: pointer;
+
+}
+
+.BargainBox>div>img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.DiscountContainer{
+    /* border: 1px solid red; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.DiscountBox{
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+
+    gap: 10px;
+}
+
+.DiscountBox>div{
+
+   
+   /* border: 1px solid green; */
+   text-align: center;
+  
+  cursor: pointer;
+
+}
+
+.DiscountBox>div>img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 .loding{
     /* border: 1px solid red; */
-     width: 10%;
+     width: 50%;
      margin: auto;
+     margin-top: 10%;
+     margin-bottom: 10%;
 
 }
 
