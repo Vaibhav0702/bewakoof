@@ -425,9 +425,9 @@ const displayRazorpay = async(navigate)=>{
 
     name: "Bewakoof",
 
-    description: "Wallet Transaction",
+    description: "Transaction Wallet",
 
-    image: "http://localhost:5000/logo.png",
+    image: "https://bewakoofdatabank.herokuapp.com/logo.png",
 
     order_id: data.id,
 

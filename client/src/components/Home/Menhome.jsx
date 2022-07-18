@@ -136,7 +136,7 @@ const Menhome = () => {
 
 
 
-                        </Carousel>;
+                        </Carousel>
                     </div>
 
 

@@ -79,7 +79,7 @@ export const Navbar = () => {
 
     }
 
-  }, [dispatch, products?.length, search, setSearch])
+  }, [dispatch, products?.length, search, setSearch ])
 
 
 
@@ -163,7 +163,7 @@ export const Navbar = () => {
             <div>
               <Link className="no1" to="/cart">
                 {
-                  auth ? <Badge color="success" badgeContent={wish.length} overlap="circular">
+                  auth ? <Badge color="success" badgeContent={cart.length} overlap="circular">
                        <ShoppingBagIcon className="icon-navbar" fontSize="medium" />
                   </Badge>
                   :
